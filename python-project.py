@@ -1,3 +1,9 @@
+""" 
+Howdy, we are group 7.
+This python project is designed to parse and analyze log files from an Apache web server in order to provide insightful analytics to make business decisions.
+Below is oue program design.
+""" 
+
 import http_access_log.txt
 
 file = open("http_access_log.txt","r")
