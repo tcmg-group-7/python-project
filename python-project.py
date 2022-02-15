@@ -28,22 +28,21 @@ apr="Apr"
 data=file.read()
 datalines=data.split('\n')
 
-
 for line in datalines:
   if len(datalines) < 5:
     continue
   else:
-    if may in datalines[count]:
+    if (may + date) in datalines[count]:
       sixmonths +=1
-    if jun in datalines[count]:
+    if (jun + date) in datalines[count]:
       sixmonths +=1
-    if jul in datalines[count]:
+    if (jul + date) in datalines[count]:
       sixmonths +=1
-    if aug in datalines[count]:
+    if (aug + date) in datalines[count]:
       sixmonths +=1
-    if sep in datalines[count]:
+    if (sep + date) in datalines[count]:
       sixmonths +=1
-    if october in datalines[count]:
+    if (october + date) in datalines[count]:
       sixmonths +=1
     if nov in datalines[count]:
       sixmonths +=1
