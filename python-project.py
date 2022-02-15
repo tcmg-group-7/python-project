@@ -1,17 +1,64 @@
 # import http_access_log.txt
 
-file = open("http_access_log.txt","r")
-data = file.read()
-total_occurences = data.count("get")
-print("Number of total requests in the log:", total_occurences)
+from urllib.request import urlretrieve
 
-october= data.count("oct/1994")
-november= data.count("nov/1994")
-december= data.count("dec/1994")
-january= data.count("jan/1995")
-february= data.count("feb/1995")
-march= data.count("mar/1995")
+url='https://s3.amazonaws.com/tcmg476/http_access_log'
+local='localcopy.log'
 
-sixmonth= sum(october, november, december, january, february, march)
+local, headers=urlretrieve(url, local)
+file=open(local,'r')
 
-print("Number of requests during the first 6 months:", sixmonth)
+sixmonths=0
+count=0
+
+may="May"
+jun="Jun"
+jul="Jul"
+aug="Aug"
+sep="Sep"
+october="Oct"
+date="1995"
+nov="Nov"
+dec="Dec"
+jan="Jan"
+feb="Feb"
+mar="Mar"
+apr="Apr"
+
+data=file.read()
+datalines=data.split('\n')
+
+
+for line in datalines:
+  if len(datalines) < 5:
+    continue
+  else:
+    if may in datalines[count]:
+      sixmonths +=1
+    if jun in datalines[count]:
+      sixmonths +=1
+    if jul in datalines[count]:
+      sixmonths +=1
+    if aug in datalines[count]:
+      sixmonths +=1
+    if sep in datalines[count]:
+      sixmonths +=1
+    if october in datalines[count]:
+      sixmonths +=1
+    if nov in datalines[count]:
+      sixmonths +=1
+    if dec in datalines[count]:
+      sixmonths +=1
+    if jan in datalines[count]:
+      sixmonths +=1
+    if feb in datalines[count]:
+      sixmonths +=1
+    if mar in datalines[count]:
+      sixmonths +=1
+    if apr in datalines[count]:
+      sixmonths +=1
+    count +=1
+    
+print(f"There were {count} requests in total.")
+print(f"There were {sixmonths} requests in the last six months.")
+
