@@ -33,6 +33,12 @@ for line in datalines:
   if len(datalines) < 5:
     continue
   else:
+    if nov in datalines[count]:
+    if dec in datalines[count]:
+    if jan in datalines[count]:
+    if feb in datalines[count]:
+    if mar in datalines[count]:
+    if apr in datalines[count]:
     if may in datalines[count]:
       sixmonths +=1
     if jun in datalines[count]:
@@ -46,12 +52,6 @@ for line in datalines:
     if october in datalines[count]:
       if date in datelines[count]:
         sixmonths +=1
-    if nov in datalines[count]:
-    if dec in datalines[count]:
-    if jan in datalines[count]:
-    if feb in datalines[count]:
-    if mar in datalines[count]:
-    if apr in datalines[count]:
     count +=1
     
 print("There were" + str(count) + "requests in total.")
