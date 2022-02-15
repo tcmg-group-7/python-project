@@ -21,6 +21,7 @@ date="1995"
 nov="Nov"
 dec="Dec"
 jan="Jan"
+feb="Feb"
 mar="Mar"
 apr="Apr"
 
@@ -48,6 +49,7 @@ for line in datalines:
     if nov in datalines[count]:
     if dec in datalines[count]:
     if jan in datalines[count]:
+    if feb in datalines[count]:
     if mar in datalines[count]:
     if apr in datalines[count]:
     count +=1
