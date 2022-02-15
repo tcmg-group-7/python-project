@@ -6,7 +6,7 @@ url='https://s3.amazonaws.com/tcmg476/http_access_log'
 local='localcopy.log'
 
 local, headers=urlretrieve(url, local)
-file=open('local',r)
+file=open(local,'r')
 
 sixmonths=0
 count=0
@@ -44,16 +44,21 @@ for line in datalines:
     if sep in datalines[count]:
       sixmonths +=1
     if october in datalines[count]:
-      if date in datelines[count]:
-        sixmonths +=1
+      sixmonths +=1
     if nov in datalines[count]:
+      sixmonths +=1
     if dec in datalines[count]:
+      sixmonths +=1
     if jan in datalines[count]:
+      sixmonths +=1
     if feb in datalines[count]:
+      sixmonths +=1
     if mar in datalines[count]:
+      sixmonths +=1
     if apr in datalines[count]:
+      sixmonths +=1
     count +=1
     
-print("There were" + str(count) + "requests in total.")
-print("There were" +str(sixmonths) + "requests in the last six months.")
-    
+print(f"There were {count} requests in total.")
+print(f"There were {sixmonths} requests in the last six months.")
+
