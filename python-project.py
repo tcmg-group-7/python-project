@@ -32,30 +32,30 @@ for line in datalines:
   if len(datalines) < 5:
     continue
   else:
-    if (may + date) in datalines[count]:
+    if (may + "/" + date) in datalines[count]:
       sixmonths +=1
-    if (jun + date) in datalines[count]:
+    if (jun +"/" + date) in datalines[count]:
       sixmonths +=1
-    if (jul + date) in datalines[count]:
+    if (jul +"/" + date) in datalines[count]:
       sixmonths +=1
-    if (aug + date) in datalines[count]:
+    if (aug + "/"+ date) in datalines[count]:
       sixmonths +=1
-    if (sep + date) in datalines[count]:
+    if (sep + "/"+ date) in datalines[count]:
       sixmonths +=1
-    if (october + date) in datalines[count]:
+    if (october + "/" + date) in datalines[count]:
       sixmonths +=1
-    if nov in datalines[count]:
-      sixmonths +=1
-    if dec in datalines[count]:
-      sixmonths +=1
-    if jan in datalines[count]:
-      sixmonths +=1
-    if feb in datalines[count]:
-      sixmonths +=1
-    if mar in datalines[count]:
-      sixmonths +=1
-    if apr in datalines[count]:
-      sixmonths +=1
+    # if nov in datalines[count]:
+    #   sixmonths +=1
+    # if dec in datalines[count]:
+    #   sixmonths +=1
+    # if jan in datalines[count]:
+    #   sixmonths +=1
+    # if feb in datalines[count]:
+    #   sixmonths +=1
+    # if mar in datalines[count]:
+    #   sixmonths +=1
+    # if apr in datalines[count]:
+    #   sixmonths +=1
     count +=1
     
 print(f"There were {count} requests in total.")
